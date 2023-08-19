@@ -2,17 +2,23 @@
   position: fixed;
   top: 32px;
   left: 32px;
-  background-color: #161d2f;
+  background-color: var(--semiDarkBlue);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  max-width: 96px;
+  max-width: 80px;
   padding: 28px 0 28px 0;
   width: 100%;
   height: calc(100vh - 15%);
   border-radius: 20px;
   z-index: 100;
+}
+
+.navbar__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .navbar__logo {
@@ -25,22 +31,18 @@
   height: 20px;
 }
 
-.navbar__wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .navbar__list {
-  margin: 75px 0 0 0;
-  padding: 0;
   list-style: none;
-  display: flex;
-  flex-direction: column;
+  margin: 75px 0 0;
+  padding: 0;
 }
 
 .navbar__list_item {
   margin-top: 40px;
+}
+
+.navbar__list_item:first-child {
+  margin-top: 0px;
 }
 
 .navbar__user-avatar {
