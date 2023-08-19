@@ -1,10 +1,10 @@
 import React from "react";
 import style from "./Navbar.module.css";
 import logo from "../../images/logo.svg";
-import main from "../../images/main.svg";
-import series from "../../images/series.svg";
-import favour from "../../images/favour.svg";
-import moves from "../../images/moves.svg";
+import { ReactComponent as Home } from "../../images/main.svg";
+import { ReactComponent as Series } from "../../images/series.svg";
+import { ReactComponent as Favour } from "../../images/favour.svg";
+import { ReactComponent as Moves } from "../../images/moves.svg";
 import defaultAvatar from "../../images/defaultAvatar.svg";
 function Navbar() {
   return (
@@ -13,16 +13,24 @@ function Navbar() {
         <img className={style.navbar__logo} src={logo} alt="logo" />
         <ul className={style.navbar__list}>
           <li className={style.navbar__list_item}>
-            <img className={style.navbar__list_img} src={main} alt="main" />
+            <a href="" className={style.navbar__link}>
+              <Home className={style.navbar__list_img} />
+            </a>
           </li>
           <li className={style.navbar__list_item}>
-            <img className={style.navbar__list_img} src={moves} alt="moves" />
+            <a href="" className={style.navbar__link}>
+              <Moves className={style.navbar__list_img} />
+            </a>
           </li>
           <li className={style.navbar__list_item}>
-            <img className={style.navbar__list_img} src={series} alt="series" />
+            <a href="" className={style.navbar__link}>
+              <Series className={style.navbar__list_img} />
+            </a>
           </li>
           <li className={style.navbar__list_item}>
-            <img className={style.navbar__list_img} src={favour} alt="favour" />
+            <a href="" className={style.navbar__link}>
+              <Favour className={style.navbar__list_img} />
+            </a>
           </li>
         </ul>
       </div>
