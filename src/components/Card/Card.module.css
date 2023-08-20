@@ -7,6 +7,12 @@
   display: flex;
   flex-direction: column;
   border-radius: 10px;
+  opacity: 1;
+  transition: opacity 0.4s linear;
+}
+
+.wrapper:hover {
+  opacity: 0.6;
 }
 
 .image__favourite {

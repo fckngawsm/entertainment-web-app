@@ -9,12 +9,10 @@ import { MoviesType } from "../../type/Movies";
 interface CardProps extends MoviesType {}
 
 function Card({
-  id,
   year,
   title,
   category,
   raitng,
-  isTrending,
   thumbnail,
 }: CardProps) {
   return (
