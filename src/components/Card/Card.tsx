@@ -4,11 +4,23 @@ import play from "../../images/play.svg";
 import moveIcon from "../../images/moveIcon.svg";
 import favouriteIcon from "../../images/favouriteIcon.svg";
 import Rectangle from "../../images/Rectangle.svg";
-function Card() {
+import { MoviesType } from "../../type/Movies";
+
+interface CardProps extends MoviesType {}
+
+function Card({
+  id,
+  year,
+  title,
+  category,
+  raitng,
+  isTrending,
+  thumbnail,
+}: CardProps) {
   return (
     <div
       className={style.wrapper}
-      style={{ backgroundImage: "url(" + `${Rectangle}` + ")" }}
+      style={{ backgroundImage: "url(" + `${thumbnail.regular.large}` + ")" }}
     >
       <img
         className={style.image__favourite}
@@ -20,18 +32,18 @@ function Card() {
         <h3 className={style.play__title}>Play</h3>
       </div>
       <div className={style.trending__information}>
-        <p className={style.trending__description}>2019</p>
+        <p className={style.trending__description}>{year}</p>
         <div className={style.trending__type}>
           <img
             className={style.trending__type__image}
             src={moveIcon}
             alt="moveIcon"
           />
-          <p className={style.trending__description}>Movie</p>
+          <p className={style.trending__description}>{category}</p>
         </div>
-        <p className={style.trending__description}>PG</p>
+        <p className={style.trending__description}>{raitng}</p>
       </div>
-      <h3 className={style.trending__title}>Beyond Earth</h3>
+      <h3 className={style.trending__title}>{title}</h3>
     </div>
   );
 }

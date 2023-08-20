@@ -1,0 +1,15 @@
+.trending {
+  margin-top: 20px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.trending__swiper {
+  width: auto;
+  margin: 0;
+}

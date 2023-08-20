@@ -6,6 +6,7 @@ type ThumbnailSize = {
 
 export type MoviesType = {
   id: string;
+  title:string;
   year: number;
   category: string;
   raitng: string;
