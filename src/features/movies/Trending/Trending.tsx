@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import Card from "../../../components/Card/Card";
+import Card from "../../../components/CardTranding/CardTranding";
 import { useAppDispatch, useAppSelector } from "../../../redux-hooks";
 import { MoviesListSelectors } from "../movies-selectors";
 import { loadMovies } from "../movies-slice";

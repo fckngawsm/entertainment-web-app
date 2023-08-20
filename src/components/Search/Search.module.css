@@ -1,6 +1,7 @@
 .wrapper {
   display: flex;
   width: 385px;
+  padding-top: 28px;
 }
 
 .image {

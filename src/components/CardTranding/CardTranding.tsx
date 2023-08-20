@@ -1,9 +1,8 @@
 import React from "react";
-import style from "./Card.module.css";
+import style from "./CardTranding.module.css";
 import play from "../../images/play.svg";
 import moveIcon from "../../images/moveIcon.svg";
 import favouriteIcon from "../../images/favouriteIcon.svg";
-import Rectangle from "../../images/Rectangle.svg";
 import { MoviesType } from "../../type/Movies";
 
 interface CardProps extends MoviesType {}
