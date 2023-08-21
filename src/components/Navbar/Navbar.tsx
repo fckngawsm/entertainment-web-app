@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import style from "./Navbar.module.css";
 import logo from "../../images/logo.svg";
 import { ReactComponent as Home } from "../../images/main.svg";
@@ -6,7 +6,7 @@ import { ReactComponent as Series } from "../../images/series.svg";
 import { ReactComponent as Bookmark } from "../../images/Bookmark.svg";
 import { ReactComponent as Movies } from "../../images/moves.svg";
 import defaultAvatar from "../../images/defaultAvatar.svg";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 function Navbar() {
   return (
     <nav className={style.navbar}>
@@ -14,24 +14,44 @@ function Navbar() {
         <img className={style.navbar__logo} src={logo} alt="logo" />
         <ul className={style.navbar__list}>
           <li className={style.navbar__list_item}>
-            <Link to="/" className={style.navbar__link}>
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                `${isActive ? style.active : style.navbar__link}`
+              }
+            >
               <Home className={style.navbar__list_img} />
-            </Link>
+            </NavLink>
           </li>
           <li className={style.navbar__list_item}>
-            <Link to="/movies" className={style.navbar__link}>
+            <NavLink
+              to="/movies"
+              className={({ isActive }) =>
+                `${isActive ? style.active : style.navbar__link}`
+              }
+            >
               <Movies className={style.navbar__list_img} />
-            </Link>
+            </NavLink>
           </li>
           <li className={style.navbar__list_item}>
-            <Link to="/tv-series" className={style.navbar__link}>
+            <NavLink
+              to="/tv-series"
+              className={({ isActive }) =>
+                `${isActive ? style.active : style.navbar__link}`
+              }
+            >
               <Series className={style.navbar__list_img} />
-            </Link>
+            </NavLink>
           </li>
           <li className={style.navbar__list_item}>
-            <Link to="/bookmark" className={style.navbar__link}>
+            <NavLink
+              to="/bookmark"
+              className={({ isActive }) =>
+                `${isActive ? style.active : style.navbar__link}`
+              }
+            >
               <Bookmark className={style.navbar__list_img} />
-            </Link>
+            </NavLink>
           </li>
         </ul>
       </div>

@@ -47,7 +47,7 @@
   transition: 0.3s;
 }
 
-.navbar__link.active > .navbar__list_img * {
+.active > .navbar__list_img * {
   fill: var(--pureWhite);
 }
 
