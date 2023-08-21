@@ -1,6 +1,6 @@
 .wrapper {
   display: flex;
-  width: 385px;
+  width: 100%;
   padding-top: 28px;
 }
 
@@ -17,4 +17,9 @@
   color: white;
   padding: 5px;
   width: 100%;
+  border-bottom: 1px solid transparent;
+}
+
+.input:focus {
+  border-bottom: 1px solid #5a698f;
 }
