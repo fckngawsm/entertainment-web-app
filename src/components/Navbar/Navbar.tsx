@@ -24,7 +24,7 @@ function Navbar() {
             </Link>
           </li>
           <li className={style.navbar__list_item}>
-            <Link to="/series" className={style.navbar__link}>
+            <Link to="/tv-series" className={style.navbar__link}>
               <Series className={style.navbar__list_img} />
             </Link>
           </li>
