@@ -1,7 +1,5 @@
-.trending {
+.movies {
   margin-top: 20px;
-  width: 100%;
-  overflow: hidden;
 }
 
 .title {
@@ -9,9 +7,4 @@
   font-weight: 300;
   margin: 0;
   margin-bottom: 20px;
-}
-
-.trending__swiper {
-  width: auto;
-  margin: 0;
 }

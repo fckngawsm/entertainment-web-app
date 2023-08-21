@@ -2,9 +2,9 @@ import React from "react";
 import "../../index.css";
 import Navbar from "../Navbar/Navbar";
 import Search from "../Search/Search";
-import Home from "../../pages/Home";
+import HomePage from "../../pages/HomePage";
 import { Route, Routes } from "react-router-dom";
-import Movies from "../../pages/Movies";
+import MoviesPage from "../../pages/MoviesPage";
 function App() {
   return (
     <div className="page">
@@ -12,8 +12,8 @@ function App() {
         <Navbar />
         <Search />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/movies" element={<Movies />} />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/movies" element={<MoviesPage />} />
         </Routes>
       </main>
     </div>

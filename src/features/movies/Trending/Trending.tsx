@@ -14,9 +14,11 @@ import CardTrending from "../../../components/CardTranding/CardTranding";
 function Trending() {
   const dispatch = useAppDispatch();
   const movies = useAppSelector(MoviesListSelectors);
-  const { error, status } = useAppSelector(MoviesInformationSelectors);
+  const { length, status } = useAppSelector(MoviesInformationSelectors);
   useEffect(() => {
-    dispatch(loadMovies());
+    if (!length) {
+      dispatch(loadMovies());
+    }
   }, []);
   return (
     <section className={style.trending}>
