@@ -10,6 +10,7 @@ import { loadMovies } from "../movies-slice";
 import "swiper/swiper.min.css";
 import "swiper/swiper-bundle.min.css";
 import style from "./Trending.module.css";
+import CardTrending from "../../../components/CardTranding/CardTranding";
 function Trending() {
   const dispatch = useAppDispatch();
   const movies = useAppSelector(MoviesListSelectors);
@@ -32,7 +33,7 @@ function Trending() {
           ?.filter((data) => data.isTrending)
           .map((movie) => (
             <SwiperSlide>
-              {movie.isTrending && <Card key={movie.id} {...movie} />}
+              {movie.isTrending && <CardTrending key={movie.id} {...movie} />}
             </SwiperSlide>
           ))}
       </Swiper>

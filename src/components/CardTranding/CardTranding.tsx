@@ -5,15 +5,15 @@ import moveIcon from "../../images/moveIcon.svg";
 import favouriteIcon from "../../images/favouriteIcon.svg";
 import { MoviesType } from "../../type/Movies";
 
-interface CardProps extends MoviesType {}
+interface CardTrendingProps extends MoviesType {}
 
-function Card({
+function CardTrending({
   year,
   title,
   category,
   raitng,
   thumbnail,
-}: CardProps) {
+}: CardTrendingProps) {
   return (
     <div
       className={style.wrapper}
@@ -30,12 +30,14 @@ function Card({
       </div>
       <div className={style.trending__information}>
         <p className={style.trending__description}>{year}</p>
+        <span className={style.trending__dot}></span>
         <div className={style.trending__type}>
           <img
             className={style.trending__type__image}
             src={moveIcon}
             alt="moveIcon"
           />
+          <span className={style.trending__dot}></span>
           <p className={style.trending__description}>{category}</p>
         </div>
         <p className={style.trending__description}>{raitng}</p>
@@ -45,4 +47,4 @@ function Card({
   );
 }
 
-export default Card;
+export default CardTrending;
