@@ -4,7 +4,7 @@ import play from "../../images/play.svg";
 import moveIcon from "../../images/moveIcon.svg";
 import favouriteIcon from "../../images/favouriteIcon.svg";
 import { MoviesType } from "../../type/Movies";
-
+import { ReactComponent as BookmarkEmpty } from "../../images/favour.svg";
 interface CardTrendingProps extends MoviesType {}
 
 function CardTrending({
@@ -16,14 +16,10 @@ function CardTrending({
 }: CardTrendingProps) {
   return (
     <div
-      className={style.wrapper}
+      className={`${style.wrapper} ${style.hover}`}
       style={{ backgroundImage: "url(" + `${thumbnail.regular.large}` + ")" }}
     >
-      <img
-        className={style.image__favourite}
-        src={favouriteIcon}
-        alt="favourite"
-      />
+      <BookmarkEmpty className={style.image__favourite} />
       <div className={style.play__wrapper}>
         <img className={style.image__play} src={play} alt="play" />
         <h3 className={style.play__title}>Play</h3>

@@ -2,9 +2,8 @@ import React from "react";
 import style from "./Card.module.css";
 import play from "../../images/play.svg";
 import moveIcon from "../../images/moveIcon.svg";
-import favouriteIcon from "../../images/favouriteIcon.svg";
 import { MoviesType } from "../../type/Movies";
-
+import { ReactComponent as BookmarkEmpty } from "../../images/favour.svg";
 interface CardProps extends MoviesType {}
 
 function Card({ year, title, category, raitng, thumbnail }: CardProps) {
@@ -14,11 +13,7 @@ function Card({ year, title, category, raitng, thumbnail }: CardProps) {
         className={style.wrapper}
         style={{ backgroundImage: "url(" + `${thumbnail.regular.large}` + ")" }}
       >
-        <img
-          className={style.image__favourite}
-          src={favouriteIcon}
-          alt="favourite"
-        />
+        <BookmarkEmpty className={style.image__favourite} />
         <div className={style.play__wrapper}>
           <img className={style.image__play} src={play} alt="play" />
           <h3 className={style.play__title}>Play</h3>
