@@ -6,6 +6,7 @@ import { BookmarkedSelectors } from "../bookmarked-selectors";
 import Card from "../../../components/Card/Card";
 function Bookmarked() {
   const bookmarkeds = useAppSelector(BookmarkedSelectors);
+  console.log(bookmarkeds)
   return (
     <section className={style.bookmarked}>
       <div>

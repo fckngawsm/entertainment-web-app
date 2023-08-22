@@ -28,8 +28,14 @@ const bookmarkedSlice = createSlice({
 
       state.list = newCart;
     },
+    removeBookMark: (state, action) => {
+      const removeItem = state.list!.filter(
+        (item) => item.id !== action.payload
+      );
+      state.list = removeItem;
+    },
   },
 });
 
-export const { addBookMark } = bookmarkedSlice.actions;
+export const { addBookMark , removeBookMark } = bookmarkedSlice.actions;
 export const bookmarkedReducer = bookmarkedSlice.reducer;

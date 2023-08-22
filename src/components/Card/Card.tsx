@@ -6,7 +6,10 @@ import { MoviesType } from "../../type/Movies";
 import { ReactComponent as BookmarkEmpty } from "../../images/favour.svg";
 import { ReactComponent as BookmarkActive } from "../../images/favourActive.svg";
 import { useAppDispatch } from "../../redux-hooks";
-import { addBookMark } from "../../features/bookmarked/bookmarked-slice";
+import {
+  addBookMark,
+  removeBookMark,
+} from "../../features/bookmarked/bookmarked-slice";
 interface CardProps extends MoviesType {}
 
 function Card({
@@ -33,14 +36,20 @@ function Card({
   function handleAddBookmarked(data: MoviesType) {
     dispatch(addBookMark(data));
   }
+  function handleRemoveBookmarked(data: MoviesType) {
+    dispatch(removeBookMark(data.id));
+  }
   return (
     <div>
       <div
         className={style.wrapper}
         style={{ backgroundImage: "url(" + `${thumbnail.regular.large}` + ")" }}
       >
-        {isBookmarked? (
-          <BookmarkActive className={style.image__favourite} />
+        {isBookmarked ? (
+          <BookmarkActive
+            className={style.image__favourite}
+            onClick={() => handleRemoveBookmarked(data)}
+          />
         ) : (
           <BookmarkEmpty
             onClick={() => handleAddBookmarked(data)}
