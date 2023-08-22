@@ -3,11 +3,13 @@ import axios from "axios";
 import * as api from "./config";
 import { moviesReducer } from "./features/movies/movies-slice";
 import { bookmarkedReducer } from "./features/bookmarked/bookmarked-slice";
+import { searchReducer } from "./features/search/search-slice";
 
 export const store = configureStore({
   reducer: {
     movies: moviesReducer,
     bookmarked: bookmarkedReducer,
+    search: searchReducer,
   },
   devTools: true,
   middleware: (getDefaultMiddleware) =>

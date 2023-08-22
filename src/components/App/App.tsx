@@ -1,7 +1,7 @@
 import React from "react";
 import "../../index.css";
 import Navbar from "../Navbar/Navbar";
-import Search from "../Search/Search";
+import Search from "../../features/search/Search/Search";
 import HomePage from "../../pages/HomePage";
 import { Route, Routes } from "react-router-dom";
 import MoviesPage from "../../pages/MoviesPage";
