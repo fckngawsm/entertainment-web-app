@@ -11,7 +11,9 @@ function Navbar() {
   return (
     <nav className={style.navbar}>
       <div className={style.navbar__wrapper}>
-        <img className={style.navbar__logo} src={logo} alt="logo" />
+        <Link to="/">
+          <img className={style.navbar__logo} src={logo} alt="logo" />
+        </Link>
         <ul className={style.navbar__list}>
           <li className={style.navbar__list_item}>
             <NavLink

@@ -4,21 +4,33 @@ import play from "../../images/play.svg";
 import moveIcon from "../../images/moveIcon.svg";
 import { MoviesType } from "../../type/Movies";
 import { ReactComponent as BookmarkEmpty } from "../../images/favour.svg";
+import { useAppDispatch } from "../../redux-hooks";
+import { addBookMark } from "../../features/bookmarked/bookmarked-slice";
 interface CardTrendingProps extends MoviesType {}
 
 function CardTrending({
+  id,
   year,
   title,
   category,
   raitng,
   thumbnail,
+  isTrending,
 }: CardTrendingProps) {
+  const data = { id, year, title, category, raitng, thumbnail, isTrending };
+  const dispatch = useAppDispatch();
+  function handleAddBookmarked(data: MoviesType) {
+    dispatch(addBookMark(data));
+  }
   return (
     <div
       className={`${style.wrapper} ${style.hover}`}
       style={{ backgroundImage: "url(" + `${thumbnail.regular.large}` + ")" }}
     >
-      <BookmarkEmpty className={style.image__favourite} />
+      <BookmarkEmpty
+        className={style.image__favourite}
+        onClick={() => handleAddBookmarked(data)}
+      />
       <div className={style.play__wrapper}>
         <img className={style.image__play} src={play} alt="play" />
         <h3 className={style.play__title}>Play</h3>

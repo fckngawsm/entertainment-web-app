@@ -34,12 +34,17 @@
   cursor: pointer;
   z-index: 2;
   stroke: white;
-  opacity: .6;
+  opacity: 0.6;
 }
 
 .image__favourite:hover {
   background-color: white;
   fill: var(--pureWhite);
+}
+
+.image__favourite_active * {
+  fill: #fff;
+  stroke: none;
 }
 
 .image__favourite:hover path {
@@ -50,10 +55,8 @@
   display: flex;
   background-color: rgba(151, 151, 151, 0.4);
   border-radius: 25px;
-  width: fit-content;
   height: fit-content;
   width: 120px;
-  margin: 0 auto;
   padding: 9px;
   margin: 43px auto 20px;
   align-items: center;
