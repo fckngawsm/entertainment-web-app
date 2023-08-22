@@ -24,12 +24,12 @@ const bookmarkedSlice = createSlice({
 
       if (found) {
         return;
-      } else newCart.push({ ...action.payload, quantity: 1 });
+      } else newCart.push({ ...action.payload, isBookmarked: true });
 
       state.list = newCart;
     },
   },
 });
 
-export const {addBookMark} = bookmarkedSlice.actions;
+export const { addBookMark } = bookmarkedSlice.actions;
 export const bookmarkedReducer = bookmarkedSlice.reducer;

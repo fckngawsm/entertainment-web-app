@@ -11,6 +11,7 @@ export type MoviesType = {
   category: string;
   raitng: string;
   isTrending: boolean;
+  isBookmarked:boolean;
   thumbnail: {
     tranding: ThumbnailSize;
     regular: ThumbnailSize;

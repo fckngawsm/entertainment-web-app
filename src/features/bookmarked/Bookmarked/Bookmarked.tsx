@@ -18,7 +18,7 @@ function Bookmarked() {
             ))}
         </List>
       </div>
-      <div>
+      <div className={style.bookmarked}>
         <h2 className={style.title}>Bookmarked TV Series</h2>
         <List>
           {bookmarkeds
