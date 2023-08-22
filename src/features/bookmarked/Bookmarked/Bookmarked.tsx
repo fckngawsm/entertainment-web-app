@@ -6,29 +6,35 @@ import { BookmarkedSelectors } from "../bookmarked-selectors";
 import Card from "../../../components/Card/Card";
 function Bookmarked() {
   const bookmarkeds = useAppSelector(BookmarkedSelectors);
-  console.log(bookmarkeds)
+  console.log(bookmarkeds);
   return (
     <section className={style.bookmarked}>
-      <div>
-        <h2 className={style.title}>Bookmarked Movies</h2>
-        <List>
-          {bookmarkeds
-            ?.filter((data) => data.category === "Movie")
-            .map((bookmarked) => (
-              <Card {...bookmarked} />
-            ))}
-        </List>
-      </div>
-      <div className={style.bookmarked}>
-        <h2 className={style.title}>Bookmarked TV Series</h2>
-        <List>
-          {bookmarkeds
-            ?.filter((data) => data.category === "TV Series")
-            .map((bookmarked) => (
-              <Card {...bookmarked} />
-            ))}
-        </List>
-      </div>
+      {bookmarkeds?.length ? (
+        <>
+          <div>
+            <h2 className={style.title}>Bookmarked Movies</h2>
+            <List>
+              {bookmarkeds
+                ?.filter((data) => data.category === "Movie")
+                .map((bookmarked) => (
+                  <Card {...bookmarked} />
+                ))}
+            </List>
+          </div>
+          <div className={style.bookmarked}>
+            <h2 className={style.title}>Bookmarked TV Series</h2>
+            <List>
+              {bookmarkeds
+                ?.filter((data) => data.category === "TV Series")
+                .map((bookmarked) => (
+                  <Card {...bookmarked} />
+                ))}
+            </List>
+          </div>
+        </>
+      ) : (
+        <h2 className={style.title}>List empty</h2>
+      )}
     </section>
   );
 }
