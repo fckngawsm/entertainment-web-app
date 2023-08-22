@@ -2,10 +2,14 @@ import React from "react";
 import style from "./Series.module.css";
 import List from "../../../components/List/List";
 import { useAppSelector } from "../../../redux-hooks";
-import { MoviesListSelectors } from "../movies-selectors";
+import { MoviesVisibleSelectors } from "../movies-selectors";
 import Card from "../../../components/Card/Card";
+import { SearchSelectors } from "../../search/search-selectors";
 function Series() {
-  const movies = useAppSelector(MoviesListSelectors);
+  const value = useAppSelector(SearchSelectors);
+  const movies = useAppSelector((state) =>
+    MoviesVisibleSelectors(state, value)
+  );
   return (
     <section className={style.series}>
       <h2 className={style.title}>TV Series</h2>

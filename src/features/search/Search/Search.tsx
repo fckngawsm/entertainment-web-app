@@ -27,7 +27,7 @@ function Search() {
       </div>
       {value.length > 0 && (
         <h2 className={style.info}>
-          Found {movies?.length} results for {value}
+          Found {movies?.length} results for `{value}`
         </h2>
       )}
     </section>

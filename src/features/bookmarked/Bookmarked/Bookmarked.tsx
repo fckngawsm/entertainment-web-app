@@ -2,11 +2,14 @@ import React from "react";
 import style from "./Bookmarked.module.css";
 import List from "../../../components/List/List";
 import { useAppSelector } from "../../../redux-hooks";
-import { BookmarkedSelectors } from "../bookmarked-selectors";
+import { BookmarkedVisibleSelectors } from "../bookmarked-selectors";
 import Card from "../../../components/Card/Card";
+import { SearchSelectors } from "../../search/search-selectors";
 function Bookmarked() {
-  const bookmarkeds = useAppSelector(BookmarkedSelectors);
-  console.log(bookmarkeds);
+  const value = useAppSelector(SearchSelectors);
+  const bookmarkeds = useAppSelector((state) =>
+    BookmarkedVisibleSelectors(state, value)
+  );
   return (
     <section className={style.bookmarked}>
       {bookmarkeds?.length ? (
