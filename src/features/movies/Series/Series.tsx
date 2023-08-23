@@ -17,7 +17,7 @@ function Series() {
         {movies
           ?.filter((data) => data.category === "TV Series")
           .map((series) => (
-            <Card {...series} />
+            <Card key={series.id} {...series} />
           ))}
       </List>
     </section>

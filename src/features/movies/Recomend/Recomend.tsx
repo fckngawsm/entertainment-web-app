@@ -22,7 +22,7 @@ function Recomend() {
       <h2 className={style.title}>Recommended for you</h2>
       <List>
         {movies?.map((movie) => (
-          <Card {...movie} />
+          <Card key={movie.id} {...movie} />
         ))}
       </List>
     </section>

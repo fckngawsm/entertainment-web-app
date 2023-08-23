@@ -1,0 +1,29 @@
+.wrapper {
+  position: absolute;
+  left: 80px;
+  bottom: -25px;
+  background-color: var(--semiDarkBlue);
+  padding: 15px;
+  border-radius: 20px;
+  height: 120px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.button {
+  background-color: var(--red);
+  border-radius: 20px;
+  width: 100px;
+  padding: 10px 15px;
+  margin: 0 auto;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: white;
+}
+
+.link {
+  margin: 0 auto;
+}

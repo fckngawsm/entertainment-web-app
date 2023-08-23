@@ -7,6 +7,7 @@ import { Route, Routes } from "react-router-dom";
 import MoviesPage from "../../pages/MoviesPage";
 import SeriesPage from "../../pages/SeriesPage";
 import BookmarkedPage from "../../pages/BookmarkedPage";
+import RegisterPage from "../../pages/RegisterPage";
 function App() {
   return (
     <div className="page">
@@ -18,6 +19,7 @@ function App() {
           <Route path="/movies" element={<MoviesPage />} />
           <Route path="/tv-series" element={<SeriesPage />} />
           <Route path="/bookmark" element={<BookmarkedPage />} />
+          <Route path="/register" element={<RegisterPage />} />
         </Routes>
       </main>
     </div>

@@ -20,7 +20,7 @@ function Bookmarked() {
               {bookmarkeds
                 ?.filter((data) => data.category === "Movie")
                 .map((bookmarked) => (
-                  <Card {...bookmarked} />
+                  <Card key={bookmarked.id} {...bookmarked} />
                 ))}
             </List>
           </div>
