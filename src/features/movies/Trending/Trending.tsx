@@ -29,6 +29,7 @@ function Trending() {
       <h2 className={style.title}>Trending</h2>
       {status === "loading" && <h2>Loading...</h2>}
       <Swiper
+        watchSlidesProgress
         spaceBetween={40}
         slidesPerView={3}
         freeMode
@@ -38,7 +39,7 @@ function Trending() {
         {movies
           ?.filter((data) => data.isTrending)
           .map((movie) => (
-            <SwiperSlide>
+            <SwiperSlide className={style.swiperSlide}>
               {movie.isTrending && <CardTrending key={movie.id} {...movie} />}
             </SwiperSlide>
           ))}

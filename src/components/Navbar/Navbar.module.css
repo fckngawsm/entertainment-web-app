@@ -58,7 +58,59 @@
 .navbar__user_avatar {
   max-width: 40px;
   height: auto;
-  /* border: 3px solid var(--pureWhite); */
   border-radius: 50px;
   cursor: pointer;
+}
+
+@media screen and (max-width: 1024px) {
+  .navbar {
+    flex-direction: row;
+    top: 23px;
+    left: 25px;
+    max-width: 94.5%;
+    height: 72px;
+    justify-content: space-around;
+    padding: 0;
+  }
+  .navbar__wrapper {
+    width: 60%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .navbar__list {
+    display: flex;
+    margin: 0;
+    width: 172px;
+    justify-content: space-between;
+  }
+  .navbar__list_item {
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 450px) {
+  .navbar__wrapper {
+    width: 65%;
+  }  
+  .navbar {
+    left: 9px;
+    max-width: 95.5%;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .navbar__wrapper {
+    width: 65%;
+  }  
+  .navbar {
+    left: 23px;
+    max-width: 92.5%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .navbar {
+    left: 9px;
+    max-width: 95.5%;
+  }
 }

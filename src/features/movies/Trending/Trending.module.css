@@ -12,6 +12,10 @@
 }
 
 .trending__swiper {
-  width: auto;
+  width: fit-content;
   margin: 0;
+}
+
+.swiperSlide {
+  width: 470px !important;
 }

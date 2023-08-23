@@ -29,3 +29,9 @@
 .input:focus {
   border-bottom: 1px solid #5a698f;
 }
+
+@media screen and (max-width: 1024px) {
+  .wrapper {
+    margin: 66px 0 0 0;
+  }
+}

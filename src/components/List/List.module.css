@@ -8,17 +8,8 @@
 
 @media screen and (max-width: 1024px) {
   .wrapper {
-    margin: 92px 48px;
-    max-width: 928px;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 14px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .wrapper {
-    margin: 88px 24px;
-    max-width: 720px;
+    margin: 0;
+    margin-top: 24px;
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
   }
@@ -26,9 +17,8 @@
 
 @media screen and (max-width: 450px) {
   .wrapper {
-    margin: 64px 16px;
+    margin: 20px 0;
     grid-template-columns: 1fr;
-    margin-bottom: 64px;
     gap: 12px;
   }
 }

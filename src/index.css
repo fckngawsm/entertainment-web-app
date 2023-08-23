@@ -25,3 +25,20 @@ main {
   max-width: 1920px;
   color: white;
 }
+
+.swiper-container {
+  width: fit-content;
+}
+
+@media screen and (max-width: 1024px) {
+  main {
+    margin: 32px 0 0;
+    padding: 0 2.5% 0 25px;
+  }
+}
+@media screen and (max-width: 375px) {
+  main {
+    margin: 32px 0 0;
+    padding: 0 2.5% 0 2.5%;
+  }
+}
