@@ -4,6 +4,7 @@ import { Extra } from "../../type/Extra";
 import { StatusType } from "../../type/Status";
 
 type AuthInitialState = {
+  isAuth: boolean;
   user: User | null;
   status: StatusType;
   error: string | null;
@@ -13,6 +14,7 @@ const initialState: AuthInitialState = {
   user: null,
   status: "idle",
   error: null,
+  isAuth: false,
 };
 
 export const registerUser = createAsyncThunk<
@@ -49,7 +51,7 @@ export const loginUser = createAsyncThunk<
       localStorage.setItem("jwt", token);
       return data;
     } catch (error) {
-      rejectWithValue("err");
+      rejectWithValue("Check the entered data");
     }
   }
 );
@@ -72,8 +74,8 @@ export const checkAuth = createAsyncThunk<
   }
 });
 
-const userSlice = createSlice({
-  name: "@@user",
+const authSlice = createSlice({
+  name: "@@auth",
   initialState,
   reducers: {
     logOut: (state) => {
@@ -96,14 +98,15 @@ const userSlice = createSlice({
       })
       .addCase(loginUser.fulfilled, (state, action) => {
         state.user = action.payload;
+        state.isAuth = true;
         state.status = "received";
       })
       .addCase(checkAuth.fulfilled, (state, action) => {
         state.user = action.payload;
         state.status = "received";
-      })
+      });
   },
 });
 
-export const { logOut } = userSlice.actions;
-export const userReducer = userSlice.reducer;
+export const { logOut } = authSlice.actions;
+export const authReducer = authSlice.reducer;

@@ -9,8 +9,10 @@ import SeriesPage from "../../pages/SeriesPage";
 import BookmarkedPage from "../../pages/BookmarkedPage";
 import RegisterPage from "../../pages/RegisterPage";
 import LoginPage from "../../pages/LoginPage";
+import { useAppSelector } from "../../redux-hooks";
+import { isAuthSelector } from "../../features/auth/auth-selectors";
 function App() {
-  const isLogin = false;
+  const isLogin = useAppSelector(isAuthSelector);
   return (
     <div className="page">
       <main className="main">
