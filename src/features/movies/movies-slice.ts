@@ -48,7 +48,7 @@ const moviesSlice = createSlice({
       .addCase(loadMovies.fulfilled, (state, action) => {
         state.status = "received";
         state.list = action.payload.data;
-        console.log(action.payload)
+        console.log(action.payload);
       });
   },
 });

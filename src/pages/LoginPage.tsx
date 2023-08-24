@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import Auth from "../features/auth/Auth/Auth";
-import style from "../features/auth/Auth/Auth.module.css";
 import { Link, useNavigate } from "react-router-dom";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { useAppDispatch } from "../redux-hooks";
 import { User } from "../type/User";
+import style from "../features/auth/Auth/Auth.module.css";
+import Auth from "../features/auth/Auth/Auth";
 import { loginUser } from "../features/auth/auth-slice";
 function LoginPage() {
   const [error, setError] = useState("");

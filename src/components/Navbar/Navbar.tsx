@@ -1,19 +1,19 @@
 import React, { useState } from "react";
+import { Link, NavLink } from "react-router-dom";
 import style from "./Navbar.module.css";
 import logo from "../../images/logo.svg";
+import defaultAvatar from "../../images/defaultAvatar.svg";
 import { ReactComponent as Home } from "../../images/main.svg";
 import { ReactComponent as Series } from "../../images/series.svg";
 import { ReactComponent as Bookmark } from "../../images/Bookmark.svg";
 import { ReactComponent as Movies } from "../../images/moves.svg";
-import defaultAvatar from "../../images/defaultAvatar.svg";
-import { Link, NavLink } from "react-router-dom";
 import PopupLogin from "../PopupLogin/PopupLogin";
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   function handleOpenPopup() {
     setIsOpen(!isOpen);
   }
-  console.log(isOpen)
+  console.log(isOpen);
   return (
     <nav className={style.navbar}>
       <div className={style.navbar__wrapper}>

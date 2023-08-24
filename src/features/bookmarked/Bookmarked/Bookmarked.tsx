@@ -1,10 +1,10 @@
 import React from "react";
+import { useAppSelector } from "../../../redux-hooks";
 import style from "./Bookmarked.module.css";
 import List from "../../../components/List/List";
-import { useAppSelector } from "../../../redux-hooks";
-import { BookmarkedVisibleSelectors } from "../bookmarked-selectors";
 import Card from "../../../components/Card/Card";
 import { SearchSelectors } from "../../search/search-selectors";
+import { BookmarkedVisibleSelectors } from "../bookmarked-selectors";
 function Bookmarked() {
   const value = useAppSelector(SearchSelectors);
   const bookmarkeds = useAppSelector((state) =>

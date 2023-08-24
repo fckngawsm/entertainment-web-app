@@ -1,15 +1,6 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import axios from "axios";
-import {
-  persistStore,
-  persistReducer,
-  FLUSH,
-  REGISTER,
-  REHYDRATE,
-  PAUSE,
-  PURGE,
-  PERSIST,
-} from "redux-persist";
+import { persistStore, persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 import * as api from "./config";
 import { moviesReducer } from "./features/movies/movies-slice";

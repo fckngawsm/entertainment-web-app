@@ -1,9 +1,9 @@
 import React from "react";
+import { useAppSelector } from "../../../redux-hooks";
 import style from "./Series.module.css";
 import List from "../../../components/List/List";
-import { useAppSelector } from "../../../redux-hooks";
-import { MoviesVisibleSelectors } from "../movies-selectors";
 import Card from "../../../components/Card/Card";
+import { MoviesVisibleSelectors } from "../movies-selectors";
 import { SearchSelectors } from "../../search/search-selectors";
 function Series() {
   const value = useAppSelector(SearchSelectors);

@@ -1,17 +1,16 @@
 import { useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import Card from "../../../components/CardTranding/CardTranding";
 import { useAppDispatch, useAppSelector } from "../../../redux-hooks";
+import "swiper/swiper.min.css";
+import "swiper/swiper-bundle.min.css";
+import style from "./Trending.module.css";
+import { loadMovies } from "../movies-slice";
 import {
   MoviesInformationSelectors,
   MoviesVisibleSelectors,
 } from "../movies-selectors";
-import { loadMovies } from "../movies-slice";
-import "swiper/swiper.min.css";
-import "swiper/swiper-bundle.min.css";
-import style from "./Trending.module.css";
-import CardTrending from "../../../components/CardTranding/CardTranding";
 import { SearchSelectors } from "../../search/search-selectors";
+import CardTrending from "../../../components/CardTranding/CardTranding";
 function Trending() {
   const dispatch = useAppDispatch();
   const value = useAppSelector(SearchSelectors);

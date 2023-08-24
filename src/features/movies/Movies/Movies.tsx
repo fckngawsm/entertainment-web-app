@@ -1,13 +1,10 @@
 import React from "react";
-import style from "./Movies.module.css";
-import List from "../../../components/List/List";
-import { useDispatch } from "react-redux";
-import {
-  MoviesVisibleSelectors,
-} from "../movies-selectors";
 import { useAppSelector } from "../../../redux-hooks";
-import Card from "../../../components/Card/Card";
+import style from "./Movies.module.css";
+import { MoviesVisibleSelectors } from "../movies-selectors";
 import { SearchSelectors } from "../../search/search-selectors";
+import Card from "../../../components/Card/Card";
+import List from "../../../components/List/List";
 function Movies() {
   const value = useAppSelector(SearchSelectors);
   const movies = useAppSelector((state) =>

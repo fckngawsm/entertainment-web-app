@@ -37,5 +37,5 @@ const bookmarkedSlice = createSlice({
   },
 });
 
-export const { addBookMark , removeBookMark } = bookmarkedSlice.actions;
+export const { addBookMark, removeBookMark } = bookmarkedSlice.actions;
 export const bookmarkedReducer = bookmarkedSlice.reducer;

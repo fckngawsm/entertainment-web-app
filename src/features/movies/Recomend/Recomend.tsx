@@ -1,13 +1,11 @@
 import React, { useEffect } from "react";
-import List from "../../../components/List/List";
 import style from "./Recomend.module.css";
 import { useAppDispatch, useAppSelector } from "../../../redux-hooks";
-import {
-  MoviesVisibleSelectors,
-} from "../movies-selectors";
 import { loadMovies } from "../movies-slice";
-import Card from "../../../components/Card/Card";
 import { SearchSelectors } from "../../search/search-selectors";
+import { MoviesVisibleSelectors } from "../movies-selectors";
+import Card from "../../../components/Card/Card";
+import List from "../../../components/List/List";
 function Recomend() {
   const dispatch = useAppDispatch();
   const value = useAppSelector(SearchSelectors);

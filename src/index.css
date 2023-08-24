@@ -50,6 +50,6 @@ main {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--red); 
+  background: var(--red);
   -webkit-border-radius: 1ex;
 }

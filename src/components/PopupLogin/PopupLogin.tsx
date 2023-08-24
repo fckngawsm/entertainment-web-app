@@ -1,8 +1,8 @@
 import React from "react";
-import style from "./PopupLogin.module.css";
 import { Link } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../../redux-hooks";
 import { isAuthSelector } from "../../features/auth/auth-selectors";
+import style from "./PopupLogin.module.css";
 import { logOut } from "../../features/auth/auth-slice";
 
 interface PopupLoginProps {

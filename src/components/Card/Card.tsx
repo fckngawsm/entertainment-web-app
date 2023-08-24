@@ -1,11 +1,11 @@
 import React from "react";
+import { useAppDispatch } from "../../redux-hooks";
 import style from "./Card.module.css";
 import play from "../../images/play.svg";
-import moveIcon from "../../images/moveIcon.svg";
-import { MoviesType } from "../../type/Movies";
 import { ReactComponent as BookmarkEmpty } from "../../images/favour.svg";
 import { ReactComponent as BookmarkActive } from "../../images/favourActive.svg";
-import { useAppDispatch } from "../../redux-hooks";
+import moveIcon from "../../images/moveIcon.svg";
+import { MoviesType } from "../../type/Movies";
 import {
   addBookMark,
   removeBookMark,

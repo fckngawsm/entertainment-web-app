@@ -1,22 +1,23 @@
 import React, { useEffect, useState } from "react";
+import { useAppDispatch, useAppSelector } from "../../redux-hooks";
+import { Route, Routes } from "react-router-dom";
 import "../../index.css";
 import Navbar from "../Navbar/Navbar";
 import Search from "../../features/search/Search/Search";
 import HomePage from "../../pages/HomePage";
-import { Route, Routes } from "react-router-dom";
 import MoviesPage from "../../pages/MoviesPage";
 import SeriesPage from "../../pages/SeriesPage";
 import BookmarkedPage from "../../pages/BookmarkedPage";
 import RegisterPage from "../../pages/RegisterPage";
 import LoginPage from "../../pages/LoginPage";
-import { useAppDispatch, useAppSelector } from "../../redux-hooks";
 import { isAuthSelector } from "../../features/auth/auth-selectors";
-import ProtectedRoute from "../ProtectedRoute";
 import { checkAuth } from "../../features/auth/auth-slice";
+import ProtectedRoute from "../ProtectedRoute";
+
 function App() {
   const dispatch = useAppDispatch();
   const isLogin = useAppSelector(isAuthSelector);
-  console.log(isLogin)
+  console.log(isLogin);
   useEffect(() => {
     const jwt = localStorage.getItem("jwt");
     if (jwt) {

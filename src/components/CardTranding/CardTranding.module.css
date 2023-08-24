@@ -12,6 +12,7 @@
   cursor: pointer;
   position: relative;
 }
+
 .wrapper:hover::before {
   content: "";
   position: absolute;
