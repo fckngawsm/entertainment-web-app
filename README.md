@@ -43,6 +43,7 @@ Users should be able to:
 - Semantic HTML5
 - Flexbox
 - CSS Grid
+- TypeScript
 - [React](https://reactjs.org/) - JS library
 - [Redux-toolkit](https://redux-toolkit.js.org/) - JS library
 - [react-hook-form](https://react-hook-form.com/) - for form validation
