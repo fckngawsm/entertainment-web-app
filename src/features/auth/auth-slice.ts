@@ -60,7 +60,7 @@ export const checkAuth = createAsyncThunk<
   User,
   string,
   { extra: Extra; rejectWithValue: string }
->("@@user-isAuth", async (jwt, { extra: { client, api }, rejectWithValue }) => {
+>("@@user/me", async (jwt, { extra: { client, api }, rejectWithValue }) => {
   try {
     const res = await client.get(api.CHECK_TOKEN, {
       headers: {
