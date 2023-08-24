@@ -40,15 +40,21 @@
   line-height: 1.2;
   color: white;
   border: none;
-  width: 336px;
+  width: 100%;
   background-color: transparent;
   padding: 0 0 18px 16px;
-  margin-bottom: 30px;
   border-bottom: 2px solid var(--greyishBlue);
   box-sizing: border-box;
 }
 
-.input:last-of-type {
+.input__wrapper {
+  margin-bottom: 30px;
+  display: flex;
+  width: 336px;
+  position: relative;
+}
+
+.input__wrapper:last-of-type {
   margin-bottom: 0;
 }
 
@@ -89,4 +95,25 @@
 
 .link {
   text-decoration: none;
+}
+
+.error {
+  margin: 0;
+  margin-top: 10px;
+  color: var(--red);
+}
+
+.span__error {
+  position: absolute;
+  right: 10px;
+  top: 0;
+  font-weight: 300;
+  color: var(--red);
+}
+
+.error__submit {
+  color: var(--red);
+  margin: 0;
+  margin-bottom: 10px;
+  text-align: center;
 }

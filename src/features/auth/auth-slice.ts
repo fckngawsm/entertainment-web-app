@@ -26,7 +26,7 @@ export const registerUser = createAsyncThunk<
       const res = await client.post(api.REGISTER, data);
       return res.data;
     } catch (error) {
-      return rejectWithValue("У вас случилась ошибка");
+      return rejectWithValue("User with this email already exists");
     }
   }
 );
