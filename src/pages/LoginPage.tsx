@@ -2,9 +2,9 @@ import React from "react";
 import Auth from "../components/Auth/Auth";
 import style from "../components/Auth/Auth.module.css";
 import { Link } from "react-router-dom";
-function RegisterPage() {
+function LoginPage() {
   return (
-    <Auth title="Sign Up">
+    <Auth title="Login">
       <form className={style.form}>
         <fieldset className={style.information}>
           <input
@@ -17,17 +17,12 @@ function RegisterPage() {
             type="password"
             placeholder="Password"
           />
-          <input
-            className={style.input}
-            type="password"
-            placeholder="Repeat password"
-          />
-          <button className={style.button}>Create an account</button>
+          <button className={style.button}>Login to your account</button>
         </fieldset>
         <div className={style.wrapper__redirect}>
-          <p className={style.text}>Already have an account?</p>
-          <Link className={style.link} to="/login">
-            <span className={style.span}>Login</span>
+          <p className={style.text}>Don’t have an account?</p>
+          <Link className={style.link} to="/register">
+            <span className={style.span}>Sign Up</span>
           </Link>
         </div>
       </form>
@@ -35,4 +30,4 @@ function RegisterPage() {
   );
 }
 
-export default RegisterPage;
+export default LoginPage;
