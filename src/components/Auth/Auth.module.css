@@ -47,11 +47,14 @@
   border-bottom: 2px solid var(--greyishBlue);
   box-sizing: border-box;
 }
-.input:nth-child(3) {
+
+.input:last-of-type {
   margin-bottom: 0;
 }
+
 .input:focus {
   outline: none;
+  border-color: var(--pureWhite);
 }
 
 .button {
