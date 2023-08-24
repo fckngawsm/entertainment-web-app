@@ -43,15 +43,12 @@ export const loginUser = createAsyncThunk<
     try {
       const { data } = await client.post(api.LOGIN, dataUser, {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
       });
       const { token } = data;
       localStorage.setItem("jwt", token);
       return data;
     } catch (error) {
-      rejectWithValue("Check the entered data");
+      return rejectWithValue("Check the entered data");
     }
   }
 );

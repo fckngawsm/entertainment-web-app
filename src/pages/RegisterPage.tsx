@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Auth from "../features/auth/Auth/Auth";
-import style from "../components/Auth/Auth.module.css";
+import style from "../features/auth/Auth/Auth.module.css";
 import { Link, useNavigate } from "react-router-dom";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { User } from "../type/User";
@@ -13,9 +13,8 @@ function RegisterPage() {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors , isValid },
     getValues,
-    watch,
   } = useForm<User>({
     mode: "onChange",
   });
@@ -75,14 +74,19 @@ function RegisterPage() {
               placeholder="Repeat password"
               {...register("repeatPassword", {
                 required: { value: true, message: "Can’t be empty" },
+                validate: (value) => value === getValues("password"),
               })}
             />
-            {watch("repeatPassword") !== watch("password") &&
-            getValues("repeatPassword") ? (
-              <span className={style.span__error}>password not match</span>
-            ) : null}
+            {errors.repeatPassword &&
+              errors.repeatPassword.type === "validate" && (
+                <span className={style.span__error}>
+                  Passwords do not match
+                </span>
+              )}
           </div>
-          <button className={style.button}>Create an account</button>
+          <button disabled={isValid ? false : true} className={style.button}>
+            Create an account
+          </button>
         </fieldset>
         {error && <h3 className={style.error__submit}>{error}</h3>}
         <div className={style.wrapper__redirect}>

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Auth from "../features/auth/Auth/Auth";
-import style from "../components/Auth/Auth.module.css";
+import style from "../features/auth/Auth/Auth.module.css";
 import { Link, useNavigate } from "react-router-dom";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { useAppDispatch } from "../redux-hooks";
@@ -29,7 +29,7 @@ function LoginPage() {
   };
   return (
     <Auth title="Login">
-      <form className={style.form} onSubmit={handleSubmit(onSubmit)}>
+      <form className={style.form} onSubmit={handleSubmit(onSubmit)} noValidate>
         <fieldset className={style.information}>
           <div className={style.input__wrapper}>
             <input
