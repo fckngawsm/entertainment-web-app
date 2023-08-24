@@ -34,7 +34,7 @@ Users should be able to:
 
 ### Links
 
-- [Live Site URL](https://entertainment-web-fhghnvpl0-aleksfedotov1.vercel.app/)
+- [Live Site URL](https://entertainment-web-app-sable.vercel.app/)
 
 ## My process
 
