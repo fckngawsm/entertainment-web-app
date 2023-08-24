@@ -15,12 +15,12 @@ import ProtectedRoute from "../ProtectedRoute";
 import { checkAuth } from "../../features/auth/auth-slice";
 function App() {
   const dispatch = useAppDispatch();
-  const [isLogin, setIsLogin] = useState(false);
+  const isLogin = useAppSelector(isAuthSelector);
+  console.log(isLogin)
   useEffect(() => {
     const jwt = localStorage.getItem("jwt");
     if (jwt) {
       dispatch(checkAuth(jwt));
-      setIsLogin(true);
     }
   }, [dispatch]);
   return (
