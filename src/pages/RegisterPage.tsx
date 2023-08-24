@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Auth from "../components/Auth/Auth";
+import Auth from "../features/auth/Auth/Auth";
 import style from "../components/Auth/Auth.module.css";
 import { Link, useNavigate } from "react-router-dom";
 import { useForm, SubmitHandler } from "react-hook-form";

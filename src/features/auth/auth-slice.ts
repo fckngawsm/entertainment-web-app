@@ -80,6 +80,7 @@ const authSlice = createSlice({
   reducers: {
     logOut: (state) => {
       state.user = null;
+      state.isAuth = false;
       localStorage.removeItem("jwt");
     },
   },
