@@ -27,3 +27,20 @@
 .link {
   margin: 0 auto;
 }
+
+@media screen and (max-width: 1024px) {
+  .wrapper {
+    width: 100px;
+    height: 70px;
+    left: -40px;
+    top: 58px;
+  }
+}
+
+@media screen and (max-width: 451px) {
+  .wrapper {
+    width: 100px;
+    height: 60px;
+    left: -60px;
+  }
+}
